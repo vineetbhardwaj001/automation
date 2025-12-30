@@ -1,19 +1,19 @@
 import { useEffect, useRef } from "react";
 import CharacterCard from "./CharacterCard";
 import "../assets/styles/character.css";
-// import realistic from "../assets/characters/realistic.png";
-// import animated from "../assets/characters/realistic.png";
-// import artistic from "../assets/characters/realistic.png";
-// import dark from "../assets/characters/realistic.png";
-// import soft from "../assets/characters/realistic.png";
+import realistic from "../assets/characters/realistic.png";
+import animated from "../assets/characters/animated.png";
+import artistic from "../assets/characters/artistic.png";
+import dark from "../assets/characters/dark.png";
+import soft from "../assets/characters/Soft.png";
 
 
 const styles = [
-  { name: "Realistic", image: "/src/assets/characters/realistic.png" },
-  { name: "Animated", image: "/src/assets/characters/realistic.png" },
-  { name: "Artistic", image: "/src/assets/characters/realistic.png" },
-  { name: "Dark Mood", image: "/src/assets/characters/realistic.png" },
-  { name: "Soft Emotional", image: "/src/assets/characters/realistic.png" },
+  { name: "Realistic", image: realistic },
+  { name: "Animated", image: animated },
+  { name: "Artistic", image: artistic},
+  { name: "Dark Mood", image: dark },
+  { name: "Soft Emotional", image: soft },
 ];
 
 export default function CharacterSection() {
