@@ -1,0 +1,145 @@
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: radial-gradient(circle, #1b1636, #0b0f19);
+  color: white;
+  font-family: system-ui;
+}
+
+/* MAIN CONTENT */
+.main {
+  margin-left: 84px;              /* EXACT sidebar width */
+  height: 100vh;
+
+  padding: 40px 48px;
+
+  overflow-y: auto;               /* ✅ scroll allowed */
+  scrollbar-width: none;          /* Firefox */
+}
+
+/* Chrome / Edge / Safari */
+.main::-webkit-scrollbar {
+  display: none;
+}
+
+/* TOPBAR */
+.topbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+/* INPUTS */
+.video-input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255,255,255,0.08);
+  color: white;
+}
+
+.section-title {
+  margin: 30px 0 10px;
+}
+
+.prompt-input {
+  width: 100%;
+  height: 60px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  border: none;
+  color: white;
+  padding: 12px;
+}
+
+/* CHARACTER CARDS */
+.card-row {
+  display: flex;
+  gap: 14px;
+  margin: 20px 0;
+}
+
+.char-card {
+  padding: 14px 24px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+/* BUTTON */
+.analyze-btn {
+  margin-top: 20px;
+  padding: 14px;
+  width: 280px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #a78bfa, #c084fc);
+  border: none;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.analyze-btn:hover{
+ background-color: transparent;
+  cursor: pointer;
+}
+
+/* PROGRESS / RESULT */
+.progress-box {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 14px;
+}
+
+.result-section {
+  margin-top: 40px;
+}
+
+.scene-row {
+  display: flex;
+  gap: 16px;
+}
+
+/* AUTO ASPECT-RATIO SCENE CARD (FINAL) */
+.scene-card.auto {
+  width: 220px;                 /* base width */
+  background: rgba(255,255,255,0.12);
+  border-radius: 14px;
+  overflow: hidden;
+
+  position: relative;
+  cursor: pointer;
+}
+
+/* VIDEO / IMAGE */
+.scene-card.auto video,
+.scene-card.auto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* PLAY ICON */
+.scene-card.auto .play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+/* LABEL */
+.scene-card.auto .label {
+  position: absolute;
+  bottom: 8px;
+  left: 12px;
+  font-size: 12px;
+  opacity: 0.7;
+}

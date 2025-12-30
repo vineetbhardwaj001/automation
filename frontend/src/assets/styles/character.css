@@ -1,0 +1,101 @@
+ .character-section {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1s ease;
+}
+
+.character-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* SOFT BACKGROUND */
+ .character-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle,
+    rgba(10, 14, 25, 0.25),
+    rgba(10, 14, 25, 0.6)
+  );
+  z-index: 1;
+} 
+
+/* CONTENT */
+.character-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.character-content h2 {
+  font-size: 46px;
+  color: #fff;
+}
+
+.character-content p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: rgba(255,255,255,0.8);
+} 
+
+/* CHARACTER ROW */
+.character-row {
+  margin-top: 80px;
+  display: flex;
+  gap: 90px;
+  justify-content: center;
+} 
+
+/* CARD */
+.character-card {
+  position: relative;
+  width: 140px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+} 
+
+.character-card img {
+  width: 100%;
+  z-index: 2;
+  position: relative;
+}
+
+.character-card span {
+  display: block;
+  margin-top: 14px;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* HOVER EFFECT */
+.character-card:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+/* GLOW */
+.character-glow {
+  position: absolute;
+  inset: -20px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(139, 92, 246, 0.6),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+.character-card:hover .character-glow {
+  opacity: 1;
+}  

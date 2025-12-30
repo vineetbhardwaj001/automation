@@ -1,0 +1,73 @@
+.glass-navbar {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  width: 100%;
+  padding: 0 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 20;
+}
+
+/* LOGO */
+.nav-logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.nav-logo span {
+  color: #8b5cf6;
+}
+
+/* GLASS PILL */
+.nav-pill {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+
+  padding: 14px 28px;
+
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* LINKS */
+.nav-item {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+
+.nav-item:hover {
+  color: #ffffff;
+}
+
+.nav-item.active {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* BUTTON */
+.nav-btn {
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #6e7bff, #8b5cf6);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 0 18px rgba(139, 92, 246, 0.6);
+}
