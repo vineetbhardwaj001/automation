@@ -1,30 +1,29 @@
 import "../assets/styles/character-section.css";
-
+import bgImg from "../assets/characters-bg2.png";
 import { useNavigate } from "react-router-dom";
-// import MagicBento from "./MagicBento";
 
 export default function CharacterSection() {
+   console.log("CharacterSection rendered"); // 👈 ADD THIS
   const navigate = useNavigate();
-
-  const goToLogin = () => {
-    navigate("/login");
-  };
-
+  console.log("Background Image Path:", bgImg);
   return (
-    <section
-      className="character-section"
-      style={{ backgroundImage: `url(./charaters-bg2.png)` }}
-    >
+   <section
+  className="character-section"
+  style={{
+    backgroundColor: "red",
+    backgroundImage: `url(${bgImg})`
+  }}
+>
 
-      {/* 🎯 Invisible Click Zones */}
-      <div className="click-zone zone-1" onClick={goToLogin}></div>
-      <div className="click-zone zone-2" onClick={goToLogin}></div>
-      <div className="click-zone zone-3" onClick={goToLogin}></div>
-      <div className="click-zone zone-4" onClick={goToLogin}></div>
-      <div className="click-zone zone-5" onClick={goToLogin}></div>
+      <div className="click-zone zone-1" onClick={() => navigate("/login")} />
+      <div className="click-zone zone-2" onClick={() => navigate("/login")} />
+      <div className="click-zone zone-3" onClick={() => navigate("/login")} />
+      <div className="click-zone zone-4" onClick={() => navigate("/login")} />
+      <div className="click-zone zone-5" onClick={() => navigate("/login")} />
     </section>
   );
 }
+
 
 //ye code ha 3d section 
 // import { useEffect, useRef } from "react";
