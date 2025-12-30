@@ -1,8 +1,11 @@
 import "../assets/styles/hero.css";
 import heroImg from "../assets/hero.jpg";
 import Navbar from "./Navbar";
+import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
+  const navigate = useNavigate();
+
   return (
     <section
       className="hero"
@@ -25,8 +28,19 @@ export default function Hero() {
           </p>
 
           <div className="hero-buttons">
-            <button className="btn-primary">Start Creating</button>
-            <button className="btn-secondary">See the Transformation</button>
+            <button
+              className="btn-primary"
+              onClick={() => navigate("/dashboard")}
+            >
+              Start Creating
+            </button>
+
+            <button
+              className="btn-secondary"
+              onClick={() => navigate("/dashboard")}
+            >
+              See the Transformation
+            </button>
           </div>
         </div>
       </div>
