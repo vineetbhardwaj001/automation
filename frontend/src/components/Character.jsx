@@ -2,10 +2,10 @@ import { useEffect, useRef } from "react";
 import CharacterCard from "./CharacterCard";
 import "../assets/styles/character.css";
 // import realistic from "../assets/characters/realistic.png";
-// import animated from "../assets/characters/animated.png";
-// import artistic from "../assets/characters/artistic.png";
-// import dark from "../assets/characters/dark.png";
-// import soft from "../assets/characters/soft.png";
+// import animated from "../assets/characters/realistic.png";
+// import artistic from "../assets/characters/realistic.png";
+// import dark from "../assets/characters/realistic.png";
+// import soft from "../assets/characters/realistic.png";
 
 
 const styles = [
@@ -18,6 +18,7 @@ const styles = [
 
 export default function CharacterSection() {
   const sectionRef = useRef(null);
+  console.log(styles);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
