@@ -1,5 +1,5 @@
 import "../assets/styles/character-section.css";
-import bgImg from "../assets/characters-bg2.png";
+
 import { useNavigate } from "react-router-dom";
 // import MagicBento from "./MagicBento";
 
@@ -13,7 +13,7 @@ export default function CharacterSection() {
   return (
     <section
       className="character-section"
-      style={{ backgroundImage: `url(${bgImg})` }}
+      style={{ backgroundImage: `url(./charaters-bg2.png)` }}
     >
 
       {/* 🎯 Invisible Click Zones */}
